@@ -57,7 +57,7 @@ const Exercises = () => {
                                 key={exercise._id}
                                 className="exercise_card"
                                 style={{
-                                    backgroundImage: `url('https://img.freepik.com/free-photo/young-fitness-man-studio_7502-5008.jpg?w=996&t=st=1695811226~exp=1695811826~hmac=3514a7f5591ed27b4acec7d99ddf5eb685d9bb1b8a202437646771fe1c275f49')`,
+                                    backgroundImage: `url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`,
                                     backgroundSize: "cover",
                                     backgroundPosition: "center",
                                     color: "white",

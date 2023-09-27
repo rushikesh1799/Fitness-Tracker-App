@@ -57,7 +57,7 @@ const FoodItems = () => {
                                 key={foodItem._id}
                                 className="goal_card"
                                 style={{
-                                    backgroundImage: `url('https://img.freepik.com/free-photo/grilled-meat-skewers-chicken-shish-kebab-with-zucchini-tomatoes-red-onions_2829-10942.jpg?w=996&t=st=1695812890~exp=1695813490~hmac=b9a27e5e3ae2b86b38bd810e5da460ae214b76ca7aa6c70e48c20651bebb09c3')`,
+                                    backgroundImage: `url('https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80')`,
                                     backgroundSize: "cover",
                                     backgroundPosition: "center",
                                     color: "white",

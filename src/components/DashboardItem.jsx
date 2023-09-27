@@ -1,6 +1,6 @@
 import React from "react";
 
-const DashboardItem = ({ value, iconName }) => {
+const DashboardItem = ({ value, iconName, desc }) => {
     return (
         <div className="dashboard_item">
             <i
@@ -8,7 +8,7 @@ const DashboardItem = ({ value, iconName }) => {
                 aria-hidden="true"
             ></i>
             <p className="value">{value}</p>
-            <p className="item_desc">Calories Burned</p>
+            <p className="item_desc">{desc}</p>
         </div>
     );
 };

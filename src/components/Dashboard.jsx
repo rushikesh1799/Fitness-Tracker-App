@@ -29,18 +29,25 @@ const Dashboard = () => {
             <Navbar />
             <hr />
             <div className="calorie_metrics">
-                <DashboardItem value={totalCaloriesBurned} iconName={"fire"} />
+                <DashboardItem
+                    value={totalCaloriesBurned}
+                    iconName={"fire"}
+                    desc={"Calories Burned"}
+                />
                 <DashboardItem
                     value={totalCaloriesConsumed}
                     iconName={"cutlery"}
+                    desc={"Calories Consumed"}
                 />
                 <DashboardItem
                     value={totalCaloriesGoal}
                     iconName={"flag-checkered"}
+                    desc={"Total Calories Goal"}
                 />
                 <DashboardItem
                     value={remainingCaloriesToGoal}
                     iconName={"flag-checkered"}
+                    desc={"Remaining Calories to Goal"}
                 />
             </div>
         </div>

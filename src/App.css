@@ -1,0 +1,151 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* dashboard css */
+
+.calorie_metrics {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.dashboard_item {
+  background-color: #1d212c;
+  width: 150px;
+  height: 120px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard_item>p {
+  margin: 0;
+}
+
+.value {
+  color: #ff3b01;
+  font-size: 24px;
+}
+
+.icons {
+  color: #FFFFFF;
+}
+
+.item_desc {
+  color: #7c7d83;
+}
+
+/* nav css */
+
+.nav_wrapper {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* goals css */
+.goals_wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.goal_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 1rem;
+}
+
+.goal_card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+}
+
+.exercise_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 1rem;
+}
+
+.exercise_card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+}
+
+
+.add_goal {
+  margin-top: 1rem !important;
+}
+
+.form_input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fetch_btn {
+  margin: 0.5rem 0;
+}

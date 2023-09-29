@@ -8,7 +8,7 @@ const Navbar = () => {
                 Dashboard
             </Link>
             <Link to="/exercises" className="nav_links">
-                exercises
+                Exercises
             </Link>
             <Link to="/foodItems" className="nav_links">
                 FoodItems

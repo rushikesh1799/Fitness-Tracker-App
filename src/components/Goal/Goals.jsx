@@ -75,7 +75,7 @@ const Goals = () => {
                         return (
                             <div
                                 key={goal._id}
-                                className="goal_card"
+                                className="goal_card goals_card_text"
                                 style={{
                                     backgroundImage: `url('https://img.freepik.com/free-photo/dartboard-with-arrow-increasing-bar-graph-enhance-setup-business-objective-target-goal-concept-by-3d-render_616485-95.jpg?w=360&t=st=1695812552~exp=1695813152~hmac=bc104ff92fed4242af0e09bb245928af7d37c353c12b2de55c61af957c959c15')`,
                                     backgroundSize: "cover",

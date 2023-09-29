@@ -12,7 +12,7 @@ const style = {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    width: 400,
+    width: 500,
     bgcolor: "background.paper",
     border: "2px solid #000",
     boxShadow: 24,
@@ -86,7 +86,7 @@ const AddNewFoodItem = () => {
                             mt: 2,
                             display: "flex",
                             flexDirection: "column",
-                            gap: "0.5rem",
+                            gap: "1rem",
                         }}
                         component="div"
                     >
@@ -95,7 +95,8 @@ const AddNewFoodItem = () => {
                                 Name (Food Item/Meal):
                             </label>
                             <TextField
-                                id="filled-basic address1"
+                                id="outlined-required"
+                                label="Name"
                                 variant="outlined"
                                 required
                                 size="small"
@@ -106,12 +107,14 @@ const AddNewFoodItem = () => {
                                         name: e.target.value,
                                     }))
                                 }
+                                sx={{ width: "50%" }}
                             />
                         </div>
                         <div className="form_input">
                             <label htmlFor="address2">Calories (cal):</label>
                             <TextField
-                                id="filled-basic address2"
+                                id="outlined-required"
+                                label="Calories (cal)"
                                 variant="outlined"
                                 required
                                 size="small"
@@ -123,12 +126,14 @@ const AddNewFoodItem = () => {
                                         calories: e.target.value,
                                     }))
                                 }
+                                sx={{ width: "50%" }}
                             />
                         </div>
                         <div className="form_input">
                             <label htmlFor="city">Protein (gms):</label>
                             <TextField
-                                id="filled-basic city"
+                                id="outlined-required"
+                                label="Protein (gms)"
                                 variant="outlined"
                                 required
                                 size="small"
@@ -140,12 +145,14 @@ const AddNewFoodItem = () => {
                                         protein: e.target.value,
                                     }))
                                 }
+                                sx={{ width: "50%" }}
                             />
                         </div>
                         <div className="form_input">
                             <label htmlFor="state">Carbohydrates (gms):</label>
                             <TextField
-                                id="filled-basic state"
+                                id="outlined-required"
+                                label="Carbohydrates (gms)"
                                 variant="outlined"
                                 required
                                 size="small"
@@ -157,13 +164,15 @@ const AddNewFoodItem = () => {
                                         carbohydrates: e.target.value,
                                     }))
                                 }
+                                sx={{ width: "50%" }}
                             />
                         </div>
                         <div className="form_input">
                             <label htmlFor="pincode">Fat (gms):</label>
                             <TextField
+                                id="outlined-required"
+                                label="Fat (gms)"
                                 type="number"
-                                id="filled-basic pincode"
                                 variant="outlined"
                                 required
                                 size="small"
@@ -174,6 +183,7 @@ const AddNewFoodItem = () => {
                                         fat: e.target.value,
                                     }))
                                 }
+                                sx={{ width: "50%" }}
                             />
                         </div>
                     </Typography>

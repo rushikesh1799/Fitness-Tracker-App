@@ -6,6 +6,7 @@ import TextField from "@mui/material/TextField";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addGoals } from "../../redux/Actions/goalsAction";
+import { MenuItem } from "@mui/material";
 
 const style = {
     position: "absolute",
@@ -86,14 +87,15 @@ const AddNewGoal = () => {
                             mt: 2,
                             display: "flex",
                             flexDirection: "column",
-                            gap: "0.5rem",
+                            gap: "1rem",
                         }}
                         component="div"
                     >
                         <div className="form_input">
                             <label htmlFor="address1">Name:</label>
                             <TextField
-                                id="filled-basic address1"
+                                id="outlined-required"
+                                label="Goal title"
                                 variant="outlined"
                                 required
                                 size="small"
@@ -104,12 +106,14 @@ const AddNewGoal = () => {
                                         name: e.target.value,
                                     }))
                                 }
+                                sx={{ width: "60%" }}
                             />
                         </div>
                         <div className="form_input">
                             <label htmlFor="address2">Description:</label>
                             <TextField
-                                id="filled-basic address2"
+                                id="outlined-required"
+                                label="Description"
                                 variant="outlined"
                                 required
                                 size="small"
@@ -120,12 +124,13 @@ const AddNewGoal = () => {
                                         description: e.target.value,
                                     }))
                                 }
+                                sx={{ width: "60%" }}
                             />
                         </div>
                         <div className="form_input">
                             <label htmlFor="city">Target Date:</label>
                             <TextField
-                                id="filled-basic city"
+                                id="outlined-required"
                                 variant="outlined"
                                 required
                                 type="date"
@@ -137,15 +142,18 @@ const AddNewGoal = () => {
                                         target_date: e.target.value,
                                     }))
                                 }
+                                sx={{ width: "60%" }}
                             />
                         </div>
                         <div className="form_input">
                             <label htmlFor="state">Target Calories:</label>
                             <TextField
-                                id="filled-basic state"
+                                id="outlined-required"
+                                label="Target Calories"
                                 variant="outlined"
                                 required
                                 size="small"
+                                type="number"
                                 value={newGoal.target_calories}
                                 onChange={(e) =>
                                     setNewGoal((prev) => ({
@@ -153,11 +161,36 @@ const AddNewGoal = () => {
                                         target_calories: e.target.value,
                                     }))
                                 }
+                                sx={{ width: "60%" }}
                             />
                         </div>
                         <div className="form_input">
                             <label htmlFor="pincode">Status:</label>
                             <TextField
+                                id="outlined-select-goal"
+                                select
+                                label="Select status"
+                                value={newGoal.status}
+                                onChange={(e) =>
+                                    setNewGoal((prev) => ({
+                                        ...prev,
+                                        status: e.target.value,
+                                    }))
+                                }
+                                sx={{ width: "60%" }}
+                                size="small"
+                            >
+                                <MenuItem key={`1`} value={"In Progress"}>
+                                    In Progress
+                                </MenuItem>
+                                <MenuItem key={`1`} value={"Achieved"}>
+                                    Achieved
+                                </MenuItem>
+                                <MenuItem key={`1`} value={"Abandoned"}>
+                                    Abandoned
+                                </MenuItem>
+                            </TextField>
+                            {/* <TextField
                                 type="text"
                                 id="filled-basic pincode"
                                 variant="outlined"
@@ -170,7 +203,7 @@ const AddNewGoal = () => {
                                         status: e.target.value,
                                     }))
                                 }
-                            />
+                            /> */}
                         </div>
                     </Typography>
                     <Typography

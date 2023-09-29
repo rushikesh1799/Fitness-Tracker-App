@@ -82,14 +82,15 @@ const AddNewExercise = () => {
                             mt: 2,
                             display: "flex",
                             flexDirection: "column",
-                            gap: "0.5rem",
+                            gap: "1rem",
                         }}
                         component="div"
                     >
                         <div className="form_input">
                             <label htmlFor="address1">Name:</label>
                             <TextField
-                                id="filled-basic address1"
+                                id="outlined-required"
+                                label="Name"
                                 variant="outlined"
                                 required
                                 size="small"
@@ -100,12 +101,14 @@ const AddNewExercise = () => {
                                         name: e.target.value,
                                     }))
                                 }
+                                sx={{ width: "50%" }}
                             />
                         </div>
                         <div className="form_input">
                             <label htmlFor="address2">Duration:</label>
                             <TextField
-                                id="filled-basic address2"
+                                id="outlined-required"
+                                label="Duration (time)"
                                 variant="outlined"
                                 required
                                 size="small"
@@ -117,12 +120,14 @@ const AddNewExercise = () => {
                                         duration: e.target.value,
                                     }))
                                 }
+                                sx={{ width: "50%" }}
                             />
                         </div>
                         <div className="form_input">
                             <label htmlFor="city">Calories Burned:</label>
                             <TextField
-                                id="filled-basic city"
+                                id="outlined-required"
+                                label="Calories (cal)"
                                 variant="outlined"
                                 required
                                 size="small"
@@ -134,6 +139,7 @@ const AddNewExercise = () => {
                                         calories_Burned: e.target.value,
                                     }))
                                 }
+                                sx={{ width: "50%" }}
                             />
                         </div>
                     </Typography>

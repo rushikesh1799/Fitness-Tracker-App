@@ -10,7 +10,7 @@ const Loader = () => {
                 margin: "1rem 0rem",
             }}
         >
-            <CircularProgress />
+            <CircularProgress style={{ color: "#ff3b01" }} />
         </Box>
     );
 };

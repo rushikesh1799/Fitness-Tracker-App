@@ -1,4 +1,5 @@
 import React from "react";
+import Loader from "./Loader";
 
 const DashboardItem = ({ value, iconName, desc }) => {
     return (
@@ -7,7 +8,7 @@ const DashboardItem = ({ value, iconName, desc }) => {
                 className={`fa fa-${iconName} fa-2x icons`}
                 aria-hidden="true"
             ></i>
-            <p className="value">{value}</p>
+            {value ? <p className="value">{value}</p> : <Loader />}
             <p className="item_desc">{desc}</p>
         </div>
     );

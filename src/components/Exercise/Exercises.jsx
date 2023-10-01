@@ -72,8 +72,12 @@ const Exercises = () => {
                                     {exercise.duration}
                                 </p>
                                 <p>
+                                    <b>Exercise Type:</b>{" "}
+                                    {exercise.exercise_type}
+                                </p>
+                                <p>
                                     <b>Calories Burned:</b>{" "}
-                                    {exercise.calories_Burned}
+                                    {exercise.calories_burned}
                                 </p>
 
                                 <Button

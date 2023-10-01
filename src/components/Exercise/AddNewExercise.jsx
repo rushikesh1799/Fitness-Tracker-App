@@ -6,6 +6,7 @@ import TextField from "@mui/material/TextField";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addExercises } from "../../redux/Actions/exercisesAction";
+import { MenuItem } from "@mui/material";
 
 const style = {
     position: "absolute",
@@ -33,13 +34,13 @@ const AddNewExercise = () => {
     const [newExercise, setNewExercise] = useState({
         name: "",
         duration: "",
-        calories_Burned: "",
+        exercise_type: "",
     });
 
     const condition =
         newExercise.name === "" ||
         newExercise.duration === "" ||
-        newExercise.calories_Burned === "";
+        newExercise.exercise_type === "";
 
     const handleSubmit = () => {
         if (condition) {
@@ -105,6 +106,66 @@ const AddNewExercise = () => {
                             />
                         </div>
                         <div className="form_input">
+                            <label htmlFor="city">Exercise Type:</label>
+                            <TextField
+                                id="outlined-required"
+                                select
+                                label="Select Exercise Type"
+                                variant="outlined"
+                                required
+                                size="small"
+                                value={newExercise.exercise_type}
+                                onChange={(e) =>
+                                    setNewExercise((prev) => ({
+                                        ...prev,
+                                        exercise_type: e.target.value,
+                                    }))
+                                }
+                                sx={{ width: "50%" }}
+                            >
+                                <MenuItem key={`2`} value={"Running"}>
+                                    Running
+                                </MenuItem>
+                                <MenuItem key={`3`} value={"Swimming"}>
+                                    Swimming
+                                </MenuItem>
+                                <MenuItem key={`4`} value={"Cycling"}>
+                                    Cycling
+                                </MenuItem>
+
+                                <MenuItem key={`7`} value={"Squats"}>
+                                    Squats
+                                </MenuItem>
+                                <MenuItem key={`8`} value={"Yoga"}>
+                                    Yoga
+                                </MenuItem>
+                                <MenuItem key={`9`} value={"Dancing"}>
+                                    Dancing
+                                </MenuItem>
+                                <MenuItem key={`10`} value={"Dancing"}>
+                                    Plank
+                                </MenuItem>
+
+                                <MenuItem key={`12`} value={"Burpees"}>
+                                    Burpees
+                                </MenuItem>
+                                <MenuItem key={`13`} value={"Bicycling"}>
+                                    Bicycling
+                                </MenuItem>
+
+                                <MenuItem key={`16`} value={"Rowing"}>
+                                    Rowing
+                                </MenuItem>
+
+                                <MenuItem key={`18`} value={"Treadmill"}>
+                                    Treadmill
+                                </MenuItem>
+                                <MenuItem key={`19`} value={"Hiking"}>
+                                    Hiking
+                                </MenuItem>
+                            </TextField>
+                        </div>
+                        <div className="form_input">
                             <label htmlFor="address2">Duration:</label>
                             <TextField
                                 id="outlined-required"
@@ -118,25 +179,6 @@ const AddNewExercise = () => {
                                     setNewExercise((prev) => ({
                                         ...prev,
                                         duration: e.target.value,
-                                    }))
-                                }
-                                sx={{ width: "50%" }}
-                            />
-                        </div>
-                        <div className="form_input">
-                            <label htmlFor="city">Calories Burned:</label>
-                            <TextField
-                                id="outlined-required"
-                                label="Calories (cal)"
-                                variant="outlined"
-                                required
-                                size="small"
-                                type="number"
-                                value={newExercise.calories_Burned}
-                                onChange={(e) =>
-                                    setNewExercise((prev) => ({
-                                        ...prev,
-                                        calories_Burned: e.target.value,
                                     }))
                                 }
                                 sx={{ width: "50%" }}

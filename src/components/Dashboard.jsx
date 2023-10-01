@@ -10,7 +10,7 @@ const Dashboard = () => {
     const goals = useSelector((state) => state.goal.goals);
 
     const totalCaloriesBurned = exercises.reduce(
-        (acc, exercise) => acc + Number(exercise.calories_Burned),
+        (acc, exercise) => acc + Number(exercise.calories_burned),
         0
     );
     const totalCaloriesConsumed = FoodItems.reduce(

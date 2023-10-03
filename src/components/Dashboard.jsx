@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import { useSelector } from "react-redux";
 import DashboardItem from "./DashboardItem";
+import Footer from "./footer";
 
 const Dashboard = () => {
     const exercises = useSelector((state) => state.exercise.exercises);
@@ -50,6 +51,7 @@ const Dashboard = () => {
                     desc={"Remaining Calories to Goal"}
                 />
             </div>
+            <Footer />
         </div>
     );
 };

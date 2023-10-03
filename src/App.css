@@ -1,7 +1,6 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* #root {
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
@@ -18,7 +17,7 @@
 
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
-}
+} */
 
 
 @media (prefers-reduced-motion: no-preference) {
@@ -153,8 +152,6 @@
   border-radius: 1rem;
 }
 
-
-
 .exercise_card::before {
   content: "";
   position: absolute;
@@ -184,4 +181,101 @@
 
 .fetch_btn {
   margin: 0.5rem 0;
+}
+
+/* footer css */
+
+/* .footer {
+  background-color: #daa520;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #161616;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.footer .link {
+  color: #161616;
+  text-decoration: none;
+}
+
+.link {
+  box-sizing: border-box;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.link:hover {
+  border: 1px solid #5be9b9;
+  padding: 3px;
+  box-shadow: 2.5px 5px #5be9b9;
+}
+
+.footer .footer-header {
+  font-weight: bold;
+  font-size: larger;
+}
+
+.footer ul {
+  padding-inline-start: 0px;
+  padding: 0.75rem;
+  list-style: none;
+}
+
+.list-non-bullet {
+  list-style: none;
+  padding-inline-start: 0px;
+}
+
+.list-item-inline {
+  display: inline;
+  padding: 0rem 0.5rem;
+} */
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.footer .link {
+  text-decoration: none;
+}
+
+.footer-header {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 65%;
+  }
+
+  .calorie_metrics {
+    padding-bottom: 10rem;
+  }
 }

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import { useSelector } from "react-redux";
 import DashboardItem from "./DashboardItem";
-import Footer from "./footer";
+import Footer from "./Footer";
 
 const Dashboard = () => {
     const exercises = useSelector((state) => state.exercise.exercises);
